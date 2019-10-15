@@ -1,0 +1,12 @@
+.editorconfig
+.gitattributes
+.stylelintrc
+
+node_modules/
+build/
+
+Thumbs.db
+
+*.code-workspace
+
+outline.css

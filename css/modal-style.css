@@ -1,14 +1,50 @@
-.modal {
-    position: fixed;
-    top: 50px;
-    left: 50px;
+body {
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, .5);
+}
+
+#wrapRepair, #wrapTheyallow {
+    height: 100%;
+    margin: 0 auto;
+}
+
+.btn__modal {
+    display: none;
+}
+
+@media(min-width: 1000px) {
+    .btn__modal {
+        position: fixed;
+        bottom: 100px;
+        left: 100px;
+        
+        width: 150px;
+        height: 80px;
+        
+        font-family: YesevaOne, Arial, sans-serif;
+        font-size: 24px;
+        line-height: 80px;
+        font-weight: 400;
+        text-align: center;
+        text-decoration: none;
+        text-transform: none;
+        color: rgb(6, 7, 12);
     
-    padding: 30px 50px;
+        background-color: rgba(190, 235, 94, 0.7);
+        border: 1px solid rgb(171, 241, 6);
+        border-radius: 20px;
 
-    font-size: 24px;
-    line-height: 30px;
+        cursor: pointer;
+    }
 
-    background-color: #abf10633;
-    border: 1px solid rgba(171, 241, 6, 0.2);
-    border-radius: 20px;
+    .btn__modal--mobile,
+    .btn__modal--back  {
+        display: block;
+    }
+
+    .btn__modal--mobile,
+    .btn__modal--desktop {
+        bottom: 200px;
+    }
 }

@@ -16,7 +16,7 @@ h1, h2, h3 {
     margin: 0;
     padding: 0;
 
-    color: #9da5b4;
+    color: #d6d8da;
 }
 
 h1 {
@@ -36,15 +36,16 @@ a {
    line-height: 30px;
    color: #d6d8da;
    text-decoration: none;
+}
 
-   border-bottom: 1px solid #d6d8da;
+li a {
+    border-bottom: 1px solid #d6d8da;
 }
 
 ul {
     margin: 0;
     margin-bottom: 25px;
     padding: 0;
-    list-style: none;
 }
 
 li {
@@ -56,7 +57,6 @@ li {
     font-size: 20px;
     line-height: 30px;
 }
-
 
 header {
     display: flex;
@@ -86,12 +86,20 @@ header {
 }
 
 a.info__github, a.info_telegram {
-    text-decoration: none;
     border: none;
 }
 
-.education, .projects {
+.education {
     padding: 20px;
+    margin: 0 auto;
+}
+
+.education__list {
+    list-style: none;
+}
+
+.projects {
+    padding: 10px;
     margin: 0 auto;
 }
 
@@ -103,10 +111,22 @@ a.info__github, a.info_telegram {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
     padding: 10px 30px 10px 10px;
     margin-bottom: 15px;
+
+    color: #d6d8da;
     
+    background: transparent;
     border: 1px solid #d6d8da;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.education__title:hover,
+.education__title:focus {    
+    background-color: rgba(255, 255, 255, .1);
+    opacity: 1;
 }
 
 .education__arrow {
@@ -116,7 +136,7 @@ a.info__github, a.info_telegram {
 
 .projects__title {
     padding: 10px 30px 10px 10px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     
     border-bottom: 1px solid #d6d8da;
 }
@@ -142,8 +162,10 @@ a.info__github, a.info_telegram {
     border: none;
     border-radius: 50%;
 
-    opacity: 0.5;
+    opacity: 0.3;
     cursor: pointer;
+
+    z-index: 2;
 }
 
 .arrow:hover, .arrow:focus, .arrow:active {
@@ -152,15 +174,103 @@ a.info__github, a.info_telegram {
 }
 
 .arrow__prev {
-    left: 5px;
+    left: 0px;
 }
 
 .arrow__next {
-    right: 5px;
+    right: 0px;
 }
 
 .arrow__prev-icon {
     transform: rotate(180deg);
+}
+
+.project__wrap {
+    text-align: center;
+}
+
+.project__desc-show {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 30px 10px 10px;
+    margin-bottom: 10px;
+
+    font-weight: 700;
+    color: #9da5b4;
+
+    background: transparent;
+    border: 1px solid #d6d8da;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.project__desc-show:hover,
+.project__desc-show:focus {
+    background-color: rgba(255, 255, 255, .1);
+    opacity: 1;
+}
+
+.project__desc-show p {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 24px;
+    line-height: 30px;
+    
+}
+
+.project__desc-show svg {
+    transform: rotate(90deg);
+}
+
+.project__link {
+    text-decoration: none;
+
+    object-fit: cover;
+}
+
+.project__img {
+    width: 100%;
+    max-width: 600px;
+
+    object-fit: cover;
+}
+
+.project__desc {
+    padding: 10px;
+
+    display: none;
+}
+
+.project__tap {
+    position: absolute;
+    bottom: 0;
+    right: 12%;
+
+    max-width: 130px;
+    padding: 5px;
+
+    font-size: 14px;
+    line-height: 16px;
+
+    background-color: rgba(255, 255, 255, .1);
+    border: 1px solid #d6d8da;
+    border-radius: 15px;
+
+    z-index: 2;
+}
+
+.project__title {
+    border-bottom: 1px solid #d6d8da;
+}
+
+.project__desc-list {
+    margin-top: 20px;
+
+    list-style: inside;
 }
 
 @media(min-width: 800px) {
@@ -171,5 +281,24 @@ a.info__github, a.info_telegram {
     .info__photo {
         margin-right: 50px;
     }
+    
+    .project__wrap {
+        position: relative;
 
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .project__img {    
+        object-fit: contain;
+    }
+
+    .project__desc-show {
+        display: none;
+    }
+
+    .project__desc {
+        display: block;
+        text-align: left;
+    }
 }

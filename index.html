@@ -34,14 +34,14 @@
   </header>
   <main>
     <section class="education">
-      <div class="education__title">
+      <button class="education__title">
         <h2>Education</h2>
         <svg  class="education__arrow" xmlns="http://www.w3.org/2000/svg" fill="#fff" width="15" height="26" version="1.1"
               viewBox="0 0 4.16 6.97"
               xmlns:xlink="http://www.w3.org/1999/xlink">
           <polygon class="fil0" points="0.78,0.1 4.16,3.49 0.68,6.97 -0,6.3 2.81,3.49 -0,0.68 0.68,0 "/>
         </svg>
-      </div>
+      </button>
       <ul class="education__list">
         <li>School:
           <ul>
@@ -73,24 +73,68 @@
             <polygon class="fil0" points="0.78,0.1 4.16,3.49 0.68,6.97 -0,6.3 2.81,3.49 -0,0.68 0.68,0 "/>
           </svg>
         </button>
-        <picture>
-          <source media="(min-width: 1000px)"
-                  srcset="http://placehold.it/1000x750">
-          <source media="(min-width: 600px)"
-                  srcset="http://placehold.it/600x450">
-          <img  class="slider__img"
-                src="http://placehold.it/375x280"
-                alt="repair-design-project">
-        </picture>
-        <picture>
-          <source media="(min-width: 1000px)"
-                  srcset="http://placehold.it/1000x750">
-          <source media="(min-width: 600px)"
-                  srcset="http://placehold.it/600x450">
-          <img  class="slider__img visually-hidden"
-                src="http://placehold.it/375x280"
-                alt="theyallow">
-        </picture>
+        <div class="project">
+          <div class="project__wrap repair-design-project">
+            <button class="project__desc-show">
+              <p>Show description</p>            
+              <svg  class="project__desc-arrow" xmlns="http://www.w3.org/2000/svg" fill="#fff" width="15" height="26" version="1.1"
+                    viewBox="0 0 4.16 6.97"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                <polygon class="fil0" points="0.78,0.1 4.16,3.49 0.68,6.97 -0,6.3 2.81,3.49 -0,0.68 0.68,0 "/>
+              </svg>
+            </button>
+            <div class="project__desc">
+              <a class="project__title" href="projects/repair-design-project/index.html">Repair-desigh-project</a>            
+              <ul class="project__desc-list">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>Responsive</li>
+              </ul>
+            </div>
+            <a href="projects/repair-design-project/index.html" class="project__link" target="_blank">
+              <picture>
+                <source media="(min-width: 1000px)"
+                        srcset="http://placehold.it/750x500">
+                <source media="(min-width: 800px)"
+                        srcset="http://placehold.it/400x400">
+                <img  class="project__img"
+                      src="http://placehold.it/365x275"
+                      alt="repair-design-project">
+              </picture>
+            </a>            
+            <p class="project__tap">Tap on the image to see the project</p>
+          </div>
+          <div class="project__wrap theyallow visually-hidden">
+              <button class="project__desc-show">
+                <p>Show description</p>            
+                <svg  class="project__desc-arrow" xmlns="http://www.w3.org/2000/svg" fill="#fff" width="15" height="26" version="1.1"
+                      viewBox="0 0 4.16 6.97"
+                      xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <polygon class="fil0" points="0.78,0.1 4.16,3.49 0.68,6.97 -0,6.3 2.81,3.49 -0,0.68 0.68,0 "/>
+                </svg>
+              </button>
+              <div class="project__desc">
+                <a class="project__title" href="projects/theyallow/index.html">Theyallow</a>            
+                <ul class="project__desc-list">
+                  <li>HTML5</li>
+                  <li>CSS3</li>
+                  <li>Responsive</li>
+                </ul>
+              </div>
+              <a href="projects/theyallow/index.html" class="project__link" target="_blank">
+                <picture>
+                  <source media="(min-width: 1000px)"
+                          srcset="http://placehold.it/750x500">
+                  <source media="(min-width: 800px)"
+                          srcset="http://placehold.it/400x400">
+                  <img  class="project__img"
+                        src="http://placehold.it/365x275"
+                        alt="repair-design-project">
+                </picture>
+              </a>            
+              <p class="project__tap">Tap on the image to see the project</p>
+            </div>
+        </div>
         <button class="arrow arrow__next" type="button">
             <span class="visually-hidden">Next slide</span>
             <svg  class="arrow__next-icon" xmlns="http://www.w3.org/2000/svg" fill="#fff" width="15" height="26" version="1.1"
@@ -98,7 +142,7 @@
                   xmlns:xlink="http://www.w3.org/1999/xlink">
               <polygon class="fil0" points="0.78,0.1 4.16,3.49 0.68,6.97 -0,6.3 2.81,3.49 -0,0.68 0.68,0 "/>
             </svg>
-          </button>
+        </button>
       </div>
     </section>
   </main>

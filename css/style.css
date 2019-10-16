@@ -283,8 +283,9 @@ a.info__github, a.info_telegram {
 
     font-size: 14px;
     line-height: 16px;
+    color: #31363f;
 
-    background-color: rgba(255, 255, 255, .1);
+    background-color: rgba(255, 255, 255, .5);
     border: 1px solid #d6d8da;
     border-radius: 15px;
 

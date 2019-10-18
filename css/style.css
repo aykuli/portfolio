@@ -106,6 +106,11 @@ a.info__github, a.info_telegram {
     list-style: none;
 }
 
+.education__list ul {
+    list-style-position: inside;
+    list-style-type: disc;
+}
+
 .education__title {
     display: flex;
     justify-content: space-between;
@@ -168,19 +173,17 @@ a.info__github, a.info_telegram {
 
     width: 60px;
     height: 60px;
-    background: transparent;
+    background-color: rgba(255, 255, 255, .1);
     border: none;
     border-radius: 50%;
 
-    opacity: 0.3;
     cursor: pointer;
 
     z-index: 9999;
 }
 
 .arrow:hover, .arrow:focus, .arrow:active {
-    background-color: rgba(255, 255, 255, .1);
-    opacity: 1;
+    background-color: rgba(255, 255, 255, .2);
 }
 
 .arrow__prev {
@@ -209,29 +212,34 @@ a.info__github, a.info_telegram {
     text-align: center;
 
     background-color: #31363f;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .project__desc-show {
+    position: relative;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
     padding: 10px 30px 10px 10px;
     margin-bottom: 10px;
 
     font-weight: 700;
     color: #9da5b4;
 
-    background: transparent;
+    background: #31363f;
     border: 1px solid #d6d8da;
     cursor: pointer;
     opacity: 0.8;
+    z-index: 6;
+}
+
+.project__desc-show svg {
+    opacity: 0.6;
 }
 
 .project__desc-show:hover,
 .project__desc-show:focus {
-    background-color: rgba(255, 255, 255, .1);
     opacity: 1;
 }
 
@@ -241,11 +249,11 @@ a.info__github, a.info_telegram {
 
     font-family: 'Ubuntu Mono', monospace;
     font-size: 24px;
-    line-height: 30px;
-    
+    line-height: 30px;    
 }
 
 .project__desc-show svg {
+    background-color: transparent;
     transform: rotate(90deg);
 }
 
@@ -260,7 +268,7 @@ a.info__github, a.info_telegram {
 
 .project__desc {
     position: absolute;
-    top: 60px;
+    top: -300px;
     left: 0;
 
     padding: 10px 30px 10px 20px;
@@ -269,8 +277,10 @@ a.info__github, a.info_telegram {
 
     background-color: #31363f;
     border-bottom-right-radius: 15px;
-    box-shadow: 5px -5px 15px rgba(0, 0, 0, .3);
+    box-shadow: 5px 15px 15px rgba(0, 0, 0, .3);
     z-index: 5;
+
+    transition: top 1s;
 }
 
 .project__tap {
@@ -302,6 +312,22 @@ a.info__github, a.info_telegram {
     list-style: inside;
 }
 
+.slider__form {
+    padding: 1px;
+}
+
+.checkbox:focus ~ .project__desc-show {
+    outline: 1px solid rgb(9, 120, 247);
+}
+
+.checkbox--repair:checked ~ .project__desc--repair {
+    top: 60px;
+}
+
+.checkbox--theyallow:checked ~ .project__desc--theyallow {
+    top: 60px;
+}
+
 @media(min-width: 800px) {
     header {
         flex-direction: row;
@@ -321,7 +347,8 @@ a.info__github, a.info_telegram {
     }
 
     .project__desc {
-        display: block;
+        position: static;
+        
         padding: 10px 30px 10px 20px;
     
         background-color: transparent;

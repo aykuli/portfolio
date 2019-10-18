@@ -11,7 +11,6 @@
 <body>
   <header>
     <picture>
-      <!-- <source media="(min-width: 1000px)" srcset="img/aynur_142x142.jpg"> -->
       <img  class="info__photo" src="img/aynur_288x288.jpg" alt="Aynur Shauerman photo">
     </picture>
     <div class="info">
@@ -73,24 +72,29 @@
           </svg>
         </button>
         <div class="project">
-          <div class="project__wrap repair-design-project" id="repair" style="left: 0px;">
-            <button class="project__desc-show" id="repairDescBtn">
-              <p>Show description</p>            
-              <svg  class="project__desc-arrow" xmlns="http://www.w3.org/2000/svg" fill="#fff" width="15" height="26" version="1.1"
-                    viewBox="0 0 4.16 6.97"
-                    xmlns:xlink="http://www.w3.org/1999/xlink">
-                <polygon class="fil0" points="0.78,0.1 4.16,3.49 0.68,6.97 -0,6.3 2.81,3.49 -0,0.68 0.68,0 "/>
-              </svg>
-            </button>
-            <div class="project__desc" id="repairProjectDesc" style="display: none;">
-              <a class="project__title" href="iframes/repair.html">Repair-desigh-project</a>            
-              <ul class="project__desc-list">
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>Responsive</li>
-              </ul>
-            </div>
-            <a href="iframes/repair.html" class="project__link" target="_blank">
+          <div class="project__wrap" id="repair" style="left: 0px;">
+            <form class="slider__form" action="#">
+              <input class="visually-hidden checkbox checkbox--repair" type="checkbox" name="checkboxRepair" id="checkboxRepair">
+              <label class="project__desc-show" for="checkboxRepair">
+                <p>Show description</p>            
+                <svg  class="project__desc-arrow" xmlns="http://www.w3.org/2000/svg" fill="#fff" width="15" height="26" version="1.1"
+                      viewBox="0 0 4.16 6.97"
+                      xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <polygon class="fil0" points="0.78,0.1 4.16,3.49 0.68,6.97 -0,6.3 2.81,3.49 -0,0.68 0.68,0 "/>
+                </svg>
+              </label>
+              <div class="project__desc project__desc--repair" id="repairProjectDesc">
+                <a class="project__title" href="iframes/repair.html">Repair-desigh-project</a>            
+                <ul class="project__desc-list">
+                  <li>HTML5/CSS3</li>
+                  <li>Responsive/adaptive</li>
+                  <li>Flexbox, Grid</li>
+                  <li>Adaptive images</li>
+                  <li>JS</li>
+                </ul>
+              </div>
+            </form>
+            <a href="iframes/repair.html" class="project__link">
               <picture>
                 <source media="(min-width: 1000px)"
                         srcset="img/repair-design-project-600x600.jpg">
@@ -103,24 +107,29 @@
             </a>            
             <p class="project__tap">Tap on the image to see the project</p>
           </div>
-          <div class="project__wrap theyallow" id="theyallow" style="left: 100%;">
-              <button class="project__desc-show" id="theyallowDescBtn">
+          <div class="project__wrap" id="theyallow" style="left: 100%;">
+            <form  class="slider__form" action="#">
+            <input type="checkbox" class="visually-hidden checkbox checkbox--theyallow" name="checkboxTheyallow" id="checkboxTheyallow">
+              <label class="project__desc-show" for="checkboxTheyallow">
                 <p>Show description</p>            
                 <svg  class="project__desc-arrow" xmlns="http://www.w3.org/2000/svg" fill="#fff" width="15" height="26" version="1.1"
                       viewBox="0 0 4.16 6.97"
                       xmlns:xlink="http://www.w3.org/1999/xlink">
                   <polygon class="fil0" points="0.78,0.1 4.16,3.49 0.68,6.97 -0,6.3 2.81,3.49 -0,0.68 0.68,0 "/>
                 </svg>
-              </button>
-              <div class="project__desc" id="theyallowProjectDesc" style="display: none;">
+              </label>
+              <div class="project__desc project__desc--theyallow" id="theyallowProjectDesc">
                 <a class="project__title" href="iframes/theyallow.html">Theyallow</a>            
                 <ul class="project__desc-list">
-                  <li>HTML5</li>
-                  <li>CSS3</li>
-                  <li>Responsive</li>
+                  <li>HTML5/CSS3</li>
+                  <li>Responsive/adaptive</li>
+                  <li>Adaptive images</li>
+                  <li>Flexbox</li>
+                  <li>JS</li>
                 </ul>
               </div>
-              <a href="iframes/theyallow.html" class="project__link" target="_blank">
+            </form>
+              <a href="iframes/theyallow.html" class="project__link">
                 <picture>
                   <source media="(min-width: 1000px)"
                           srcset="img/theyalow-600x600.jpg">

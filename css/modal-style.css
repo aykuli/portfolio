@@ -10,36 +10,40 @@ body {
 }
 
 .btn__modal {
+    position: fixed;
+    bottom: 100px;
+    left: 50px;
+    
+    width: 150px;
+    height: 80px;
+    
+    font-family: YesevaOne, Arial, sans-serif;
+    font-size: 24px;
+    line-height: 80px;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    color: rgb(6, 7, 12);
+
+    background-color: rgba(190, 235, 94, 0.7);
+    border: 1px solid rgb(171, 241, 6);
+    border-radius: 20px;
+
+    cursor: pointer;
+}
+
+.btn__modal--mobile,
+.btn__modal--desktop {
     display: none;
 }
 
+.btn__modal--back  {
+    display: block;
+}
+
 @media(min-width: 1000px) {
-    .btn__modal {
-        position: fixed;
-        bottom: 100px;
-        left: 100px;
-        
-        width: 150px;
-        height: 80px;
-        
-        font-family: YesevaOne, Arial, sans-serif;
-        font-size: 24px;
-        line-height: 80px;
-        font-weight: 400;
-        text-align: center;
-        text-decoration: none;
-        text-transform: none;
-        color: rgb(6, 7, 12);
-    
-        background-color: rgba(190, 235, 94, 0.7);
-        border: 1px solid rgb(171, 241, 6);
-        border-radius: 20px;
-
-        cursor: pointer;
-    }
-
-    .btn__modal--mobile,
-    .btn__modal--back  {
+    .btn__modal--mobile  {
         display: block;
     }
 

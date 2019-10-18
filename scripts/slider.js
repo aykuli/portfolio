@@ -38,28 +38,3 @@ educationOpener.addEventListener('click', () => {
         educationList.style.display = 'none';
     }
 });
-
-if (document.body.clientWidth < 800) {
-
-    repairDescBtn.addEventListener('click', ()=> {
-        if (repairProjectDesc.style.display == 'none') {
-            repairProjectDesc.style.display = 'block';
-        } else {
-            repairProjectDesc.style.display = 'none';
-        }
-    });
-    
-    theyallowDescBtn.addEventListener('click', ()=> {
-        if (theyallowProjectDesc.style.display == 'none') {
-            theyallowProjectDesc.style.display = 'block';
-        } else {
-            theyallowProjectDesc.style.display = 'none';
-        }
-    });
-
-} else {
-    theyallowProjectDesc.style.display = 'block';
-    repairProjectDesc.style.display = 'block';
-    theyallowProjectDesc.style.position = 'static';
-    repairProjectDesc.style.position = 'static';
-}

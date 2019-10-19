@@ -47,7 +47,7 @@ document.querySelector('.arrow__next').addEventListener('click', function() {
     }
 });
 
-// swiper by Shalyapin
+// swiper with mouse by Shalyapin
 const swipeDetect = (el) => {
     let surface = el;
     let startX =  0;
@@ -58,12 +58,13 @@ const swipeDetect = (el) => {
     let startTime = 0;
     let elapsedTime = 0;
 
-    let threshold = 250;
+    let threshold = 150;
     let restraint = 100;
     let allowedTime = 300;
 
     surface.addEventListener('mousedown', function(e) {
         e.preventDefault();
+
         startX = e.pageX;
         startY = e.pageY;
         startTime = new Date().getTime();
@@ -71,25 +72,75 @@ const swipeDetect = (el) => {
 
     surface.addEventListener('mouseup', function(e) {
         e.preventDefault();
+        
         distX = e.pageX - startX;
         distY = e.pageY - startY;
         elapsedTime = new Date().getTime() - startTime;
 
-        console.log('distX = ', distX);
-        console.log('distY = ', distY);
-        console.log('elapsedTime = ', elapsedTime);
+        // console.log('distX = ', distX);
+        // console.log('distY = ', distY);
+        // console.log('elapsedTime = ', elapsedTime);
 
         if (elapsedTime <= allowedTime) {
-            console.log('(elapsedTime <= allowedTime)');
             if ( ( Math.abs(distX) > threshold ) && ( Math.abs(distY) <= restraint ) ) {
-                console.log('Math.abs(distX > threshold) && Math.abs(distY <= restraint)');
                 if (distX > 0) {
-                    console.log('--------------   distX > 0');
                     if (isEnabled) {
                         previousItem(currentItem);
                     }
                 } else {
-                    console.log('--------------   distX < 0');
+                    if (isEnabled) {
+                        nextItem(currentItem);
+                    }
+                }
+            }
+        }
+    });
+
+    //touch events for mobiles and tablets
+    surface.addEventListener('touchstart', function(e) {
+        if (e.target.classList.contains('arrow')) {
+            if (e.target.classList.contains('arrow__prev')) {
+                if (isEnabled) {
+                    previousItem(currentItem);
+                }
+            } else if (e.target.classList.contains('arrow__next')) {
+                if (isEnabled) {
+                    nextItem(currentItem);
+                }
+            }
+        }
+
+        let touchObj = e.changedTouches[0];
+        startX = touchObj.pageX;
+        startY = touchObj.pageY;
+        startTime = new Date().getTime();
+
+        e.preventDefault();
+    });
+
+    surface.addEventListener('touchmove', function(e) {        
+        e.preventDefault();
+    });
+
+    surface.addEventListener('touchend', function(e) {
+        e.preventDefault();
+
+        let touchObj = e.changedTouches[0];
+        distX = touchObj.pageX - startX;
+        distY = touchObj.pageY - startY;
+        elapsedTime = new Date().getTime() - startTime;
+
+        // console.log('distX = ', distX);
+        // console.log('distY = ', distY);
+        // console.log('elapsedTime = ', elapsedTime);
+
+        if (elapsedTime <= allowedTime) {
+            if ( ( Math.abs(distX) > threshold ) && ( Math.abs(distY) <= restraint ) ) {
+                if (distX > 0) {
+                    if (isEnabled) {
+                        previousItem(currentItem);
+                    }
+                } else {
                     if (isEnabled) {
                         nextItem(currentItem);
                     }

@@ -1,40 +1,48 @@
+let items = document.querySelectorAll('.project');
+let currentItem = 0;
+let isEnabled = true;
 
-const btnNext = document.getElementById('btnNext');
-const btnPrev = document.getElementById('btnPrev');
-const repair = document.getElementById('repair');
-const theyallow = document.getElementById('theyallow');
+function changeCurrentItem(n) {
+    currentItem = (n + items.length) % items.length;
+}
 
-const educationOpener = document.getElementById('educationOpener');
-const educationList = document.getElementById('educationList');
-const repairDescBtn = document.getElementById('repairDescBtn');
-const repairProjectDesc = document.getElementById('repairProjectDesc');
-const theyallowDescBtn = document.getElementById('theyallowDescBtn');
-const theyallowProjectDesc = document.getElementById('theyallowProjectDesc');
+function hideItem(direction) {
+    isEnabled = false;
+    items[currentItem].classList.add(direction);
+    items[currentItem].addEventListener('animationend', function() {
+        this.classList.remove('active', direction);
+    });
+}
 
-btnNext.addEventListener('click', () => {
-    if (repair.style.left == '0px') {
-        theyallow.style.left = '0px';
-        repair.style.left = '100%';
-    } else {
-        theyallow.style.left = '100%';
-        repair.style.left = '0px';        
+function showItem(direction) {
+    items[currentItem].classList.add('next', direction);
+    items[currentItem].addEventListener('animationend', function() {
+        this.classList.remove('next', direction);
+        this.classList.add('active');
+        isEnabled = true;
+    });
+}
+
+function previousItem(n) {
+    hideItem('to-right');
+    changeCurrentItem(n - 1);
+    showItem('from-left');
+}
+
+function nextItem(n) {
+    hideItem('to-left');
+    changeCurrentItem(n + 1);
+    showItem('from-right');
+}
+
+document.querySelector('.arrow__prev').addEventListener('click', function() {
+    if (isEnabled) {
+        previousItem(currentItem);
     }
 });
 
-btnPrev.addEventListener('click', () => {
-    if (repair.style.left == '0px') {
-        theyallow.style.left = '0px';
-        repair.style.left = '100%';
-    } else {
-        theyallow.style.left = '100%';
-        repair.style.left = '0px';        
-    }
-});
-
-educationOpener.addEventListener('click', () => {
-    if (educationList.style.display == 'none') {
-        educationList.style.display = 'block';
-    } else {
-        educationList.style.display = 'none';
+document.querySelector('.arrow__next').addEventListener('click', function() {
+    if (isEnabled) {
+        nextItem(currentItem);
     }
 });

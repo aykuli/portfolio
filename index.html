@@ -63,97 +63,88 @@
     <section class="projects">
       <h2 class="projects__title">Projects</h2>
       <div class="slider">
-        <button class="arrow arrow__prev" type="button" id="btnPrev">
-          <span class="visually-hidden">Previous slide</span>
-          <svg  class="arrow__prev-icon" xmlns="http://www.w3.org/2000/svg" fill="#fff" width="15" height="26" version="1.1"
-                viewBox="0 0 4.16 6.97"
-                xmlns:xlink="http://www.w3.org/1999/xlink">
-            <polygon class="fil0" points="0.78,0.1 4.16,3.49 0.68,6.97 -0,6.3 2.81,3.49 -0,0.68 0.68,0 "/>
-          </svg>
-        </button>
-        <div class="project">
-          <div class="project__wrap" id="repair" style="left: 0px;">
-            <form class="slider__form" action="#">
-              <input class="visually-hidden checkbox checkbox--repair" type="checkbox" name="checkboxRepair" id="checkboxRepair">
-              <label class="project__desc-show" for="checkboxRepair">
-                <p>Show description</p>            
-                <svg  class="project__desc-arrow" xmlns="http://www.w3.org/2000/svg" fill="#fff" width="15" height="26" version="1.1"
-                      viewBox="0 0 4.16 6.97"
-                      xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <polygon class="fil0" points="0.78,0.1 4.16,3.49 0.68,6.97 -0,6.3 2.81,3.49 -0,0.68 0.68,0 "/>
-                </svg>
-              </label>
-              <div class="project__desc project__desc--repair" id="repairProjectDesc">
-                <a class="project__title" href="iframes/repair.html">Repair-desigh-project</a>            
-                <ul class="project__desc-list">
-                  <li>HTML5/CSS3</li>
-                  <li>Responsive/adaptive</li>
-                  <li>Flexbox, Grid</li>
-                  <li>Adaptive images</li>
-                  <li>JS</li>
-                </ul>
-              </div>
-            </form>
-            <a href="iframes/repair.html" class="project__link">
-              <picture>
-                <source media="(min-width: 1000px)"
-                        srcset="img/repair-design-project-600x600.jpg">
-                <source media="(min-width: 800px)"
-                        srcset="img/repair-design-project-400x400.jpg">
-                <img  class="project__img"
-                      src="img/repair-design-project-365x275.jpg"
-                      alt="repair-design-project">
-              </picture>
-            </a>            
-            <p class="project__tap">Tap on the image to see the project</p>
-          </div>
-          <div class="project__wrap" id="theyallow" style="left: 100%;">
-            <form  class="slider__form" action="#">
-            <input type="checkbox" class="visually-hidden checkbox checkbox--theyallow" name="checkboxTheyallow" id="checkboxTheyallow">
-              <label class="project__desc-show" for="checkboxTheyallow">
-                <p>Show description</p>            
-                <svg  class="project__desc-arrow" xmlns="http://www.w3.org/2000/svg" fill="#fff" width="15" height="26" version="1.1"
-                      viewBox="0 0 4.16 6.97"
-                      xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <polygon class="fil0" points="0.78,0.1 4.16,3.49 0.68,6.97 -0,6.3 2.81,3.49 -0,0.68 0.68,0 "/>
-                </svg>
-              </label>
-              <div class="project__desc project__desc--theyallow" id="theyallowProjectDesc">
-                <a class="project__title" href="iframes/theyallow.html">Theyallow</a>            
-                <ul class="project__desc-list">
-                  <li>HTML5/CSS3</li>
-                  <li>Responsive/adaptive</li>
-                  <li>Adaptive images</li>
-                  <li>Flexbox</li>
-                  <li>JS</li>
-                </ul>
-              </div>
-            </form>
-              <a href="iframes/theyallow.html" class="project__link">
+        <button class="arrow arrow__prev" type="button">&lt;<span class="visually-hidden">Previous slide</span></button>
+        <div class="project__wrap">
+          <div class="project active">
+            <div class="project__container">
+              <form class="slider__form" action="#">
+                <input class="visually-hidden checkbox checkbox--repair" type="checkbox" name="checkboxRepair" id="checkboxRepair">
+                <label class="project__desc-show" for="checkboxRepair">
+                  <p>Show description</p>            
+                  <svg  class="project__desc-arrow" xmlns="http://www.w3.org/2000/svg" fill="#fff" width="15" height="26" version="1.1"
+                        viewBox="0 0 4.16 6.97"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <polygon class="fil0" points="0.78,0.1 4.16,3.49 0.68,6.97 -0,6.3 2.81,3.49 -0,0.68 0.68,0 "/>
+                  </svg>
+                </label>
+                <div class="project__desc project__desc--repair" id="repairProjectDesc">
+                  <a class="project__title" href="iframes/repair.html">Repair-desigh-project</a>            
+                  <ul class="project__desc-list">
+                    <li>HTML5/CSS3</li>
+                    <li>Responsive/adaptive</li>
+                    <li>Flexbox, Grid</li>
+                    <li>Adaptive images</li>
+                    <li>JS</li>
+                  </ul>
+                </div>
+              </form>
+              <a href="iframes/repair.html" class="project__link">
                 <picture>
                   <source media="(min-width: 1000px)"
-                          srcset="img/theyalow-600x600.jpg">
+                          srcset="img/repair-design-project-600x600.jpg">
                   <source media="(min-width: 800px)"
-                          srcset="img/theyalow-400x400.jpg">
+                          srcset="img/repair-design-project-400x400.jpg">
                   <img  class="project__img"
-                        src="img/theyalow-365x275.jpg"
-                        alt="theyallow">
+                        src="img/repair-design-project-365x275.jpg"
+                        alt="repair-design-project">
                 </picture>
               </a>            
               <p class="project__tap">Tap on the image to see the project</p>
+            </div>
+          </div>
+          <div class="project">
+            <div class="project__container">
+              <form  class="slider__form" action="#">
+              <input type="checkbox" class="visually-hidden checkbox checkbox--theyallow" name="checkboxTheyallow" id="checkboxTheyallow">
+                <label class="project__desc-show" for="checkboxTheyallow">
+                  <p>Show description</p>            
+                  <svg  class="project__desc-arrow" xmlns="http://www.w3.org/2000/svg" fill="#fff" width="15" height="26" version="1.1"
+                        viewBox="0 0 4.16 6.97"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <polygon class="fil0" points="0.78,0.1 4.16,3.49 0.68,6.97 -0,6.3 2.81,3.49 -0,0.68 0.68,0 "/>
+                  </svg>
+                </label>
+                <div class="project__desc project__desc--theyallow" id="theyallowProjectDesc">
+                  <a class="project__title" href="iframes/theyallow.html">Theyallow</a>            
+                  <ul class="project__desc-list">
+                    <li>HTML5/CSS3</li>
+                    <li>Responsive/adaptive</li>
+                    <li>Adaptive images</li>
+                    <li>Flexbox</li>
+                    <li>JS</li>
+                  </ul>
+                </div>
+              </form>
+                <a href="iframes/theyallow.html" class="project__link">
+                  <picture>
+                    <source media="(min-width: 1000px)"
+                            srcset="img/theyalow-600x600.jpg">
+                    <source media="(min-width: 800px)"
+                            srcset="img/theyalow-400x400.jpg">
+                    <img  class="project__img"
+                          src="img/theyalow-365x275.jpg"
+                          alt="theyallow">
+                  </picture>
+                </a>            
+                <p class="project__tap">Tap on the image to see the project</p>
+            </div>
           </div>
         </div>
-        <button class="arrow arrow__next" type="button" id="btnNext">
-            <span class="visually-hidden">Next slide</span>
-            <svg  class="arrow__next-icon" xmlns="http://www.w3.org/2000/svg" fill="#fff" width="15" height="26" version="1.1"
-                  viewBox="0 0 4.16 6.97"
-                  xmlns:xlink="http://www.w3.org/1999/xlink">
-              <polygon class="fil0" points="0.78,0.1 4.16,3.49 0.68,6.97 -0,6.3 2.81,3.49 -0,0.68 0.68,0 "/>
-            </svg>
-        </button>
+        <button class="arrow arrow__next" type="button">&gt;<span class="visually-hidden">Next slide</span></button>
       </div>
     </section>
   </main>
   <script src="scripts/slider.js"></script>
+  <script src="scripts/description.js"></script>
 </body>
 </html>

@@ -98,7 +98,10 @@ const swipeDetect = (el) => {
 
     //touch events for mobiles and tablets
     surface.addEventListener('touchstart', function(e) {
+        e.preventDefault();
+        
         if (e.target.classList.contains('arrow')) {
+            console.log('e.target.classList.contains( arrow )');
             if (e.target.classList.contains('arrow__prev')) {
                 if (isEnabled) {
                     previousItem(currentItem);
@@ -109,13 +112,25 @@ const swipeDetect = (el) => {
                 }
             }
         }
+        //open description
+        if (e.target.classList.contains('project__desc-show--repair')) {
+            e.preventDefault();
+            console.log(document.querySelector('.project__desc--repair').classList);
+            document.querySelector('.project__desc--repair').classList.toggle('open-desc');
+        }
+
+        if (e.target.classList.contains('project__desc-show--theyallow')) {
+            e.preventDefault();
+            console.log(document.querySelector('.project__desc--theyallow').classList);
+            document.querySelector('.project__desc--theyallow').classList.toggle('open-desc');
+        }
 
         let touchObj = e.changedTouches[0];
         startX = touchObj.pageX;
         startY = touchObj.pageY;
         startTime = new Date().getTime();
 
-        e.preventDefault();
+        
     });
 
     surface.addEventListener('touchmove', function(e) {        

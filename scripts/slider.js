@@ -129,11 +129,8 @@ const swipeDetect = (el) => {
         startX = touchObj.pageX;
         startY = touchObj.pageY;
         startTime = new Date().getTime();
-
-        
     });
 
-    surface.addEventListener('touchmove', function(e) {        
         e.preventDefault();
     });
 

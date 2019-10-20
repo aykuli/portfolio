@@ -10,7 +10,7 @@ let wrapWidthTheyallow = document.getElementById('wrapTheyallow').offsetWidth;
 
 if ( wrapWidthTheyallow > 1024) {
     btnMobileTheyallow.addEventListener('click', () => {
-        wrapTheyallow.style.width = '600px';
+        wrapTheyallow.style.width = '700px';
 
         btnMobileTheyallow.style.display = 'none';
         btnDesktopTheyallow.style.display = 'block';

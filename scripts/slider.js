@@ -77,10 +77,6 @@ const swipeDetect = (el) => {
         distY = e.pageY - startY;
         elapsedTime = new Date().getTime() - startTime;
 
-        // console.log('distX = ', distX);
-        // console.log('distY = ', distY);
-        // console.log('elapsedTime = ', elapsedTime);
-
         if (elapsedTime <= allowedTime) {
             if ( ( Math.abs(distX) > threshold ) && ( Math.abs(distY) <= restraint ) ) {
                 if (distX > 0) {
@@ -115,13 +111,11 @@ const swipeDetect = (el) => {
         //open description
         if (e.target.classList.contains('project__desc-show--repair')) {
             e.preventDefault();
-            console.log(document.querySelector('.project__desc--repair').classList);
             document.querySelector('.project__desc--repair').classList.toggle('open-desc');
         }
 
         if (e.target.classList.contains('project__desc-show--theyallow')) {
             e.preventDefault();
-            console.log(document.querySelector('.project__desc--theyallow').classList);
             document.querySelector('.project__desc--theyallow').classList.toggle('open-desc');
         }
 
@@ -131,20 +125,11 @@ const swipeDetect = (el) => {
         startTime = new Date().getTime();
     });
 
-        e.preventDefault();
-    });
-
     surface.addEventListener('touchend', function(e) {
-        e.preventDefault();
-
         let touchObj = e.changedTouches[0];
         distX = touchObj.pageX - startX;
         distY = touchObj.pageY - startY;
         elapsedTime = new Date().getTime() - startTime;
-
-        // console.log('distX = ', distX);
-        // console.log('distY = ', distY);
-        // console.log('elapsedTime = ', elapsedTime);
 
         if (elapsedTime <= allowedTime) {
             if ( ( Math.abs(distX) > threshold ) && ( Math.abs(distY) <= restraint ) ) {
@@ -158,7 +143,7 @@ const swipeDetect = (el) => {
                     }
                 }
             }
-        }
+        }        
     });
 }
 

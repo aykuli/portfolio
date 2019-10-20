@@ -93,9 +93,7 @@ const swipeDetect = (el) => {
     });
 
     //touch events for mobiles and tablets
-    surface.addEventListener('touchstart', function(e) {
-        e.preventDefault();
-        
+    surface.addEventListener('touchstart', function(e) {        
         if (e.target.classList.contains('arrow')) {
             console.log('e.target.classList.contains( arrow )');
             if (e.target.classList.contains('arrow__prev')) {
@@ -110,12 +108,10 @@ const swipeDetect = (el) => {
         }
         //open description
         if (e.target.classList.contains('project__desc-show--repair')) {
-            e.preventDefault();
             document.querySelector('.project__desc--repair').classList.toggle('open-desc');
         }
 
         if (e.target.classList.contains('project__desc-show--theyallow')) {
-            e.preventDefault();
             document.querySelector('.project__desc--theyallow').classList.toggle('open-desc');
         }
 

@@ -307,13 +307,15 @@ p {
 
 .slider__img--items {
   position: relative;
-  width: 100%;
-  overflow: hidden; }
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%; }
 
 .slider__img--item-in-projects {
   position: relative;
+  flex-shrink: 0;
   width: 100%;
-  display: none; }
+  animation: .5s ease-in-out; }
   .slider__img--item-in-projects img {
     width: 100%; }
 
@@ -355,25 +357,15 @@ p {
   .slider__btn--next {
     right: 13px; }
 
-.slider--active-in-projects, .slider--next-in-projects {
+.slider--active-in-projects {
   display: block; }
 
-.slider--next-in-projects {
-  position: absolute;
-  top: 0; }
-
 .slider--to-left {
+  animation-duration: .5s;
   animation-name: left; }
 
 .slider--to-right {
-  animation-name: right;
-  animation-direction: reverse; }
-
-.slider--from-left {
-  animation-name: left;
-  animation-direction: reverse; }
-
-.slider--from-right {
+  animation-duration: .5s;
   animation-name: right; }
 
 @keyframes left {
@@ -384,9 +376,9 @@ p {
 
 @keyframes right {
   from {
-    left: 100%; }
+    left: 0; }
   to {
-    left: 0; } }
+    left: 100%; } }
 
 @media (min-width: 1000px) {
   .slider__nav--list {
@@ -413,14 +405,10 @@ p {
     width: 845px;
     height: 482px; }
   .slider__img--item-in-projects {
-    flex-shrink: 0;
     width: 679px;
     height: 482px;
-    margin-right: 21px;
-    display: block; }
+    margin-right: 21px; }
   .slider__img--items {
-    display: flex;
-    flex-wrap: nowrap;
     overflow: visible; }
   .slider__btn--prev {
     display: none; }
@@ -444,12 +432,12 @@ p {
       top: 20px; }
     .slider__btn--next::after {
       top: 30px; }
-  .slider--to-right-desktop {
-    animation-duration: 1s;
-    animation-name: right-desktop; }
   .slider--null-position {
     left: 0; }
-  @keyframes right-desktop {
+  .slider--to-left-desktop {
+    animation-duration: .5s;
+    animation-name: left-desktop; }
+  @keyframes left-desktop {
     from {
       left: 0; }
     to {
@@ -1027,6 +1015,17 @@ p {
     display: none; }
     .design-types__list--imgs {
       display: none; }
+  .design-types__slider {
+    padding: 10px; }
+    .design-types__slider .slider__img--list {
+      display: flex;
+      flex-wrap: nowrap;
+      width: 100%; }
+    .design-types__slider .slider__img--item {
+      flex-shrink: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0 auto; }
 
 @media (min-width: 800px) {
   .design-types {

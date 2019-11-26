@@ -1,7 +1,10 @@
 # Aynur Shauerman [portfolio](https://aykuli.github.io/portfolio/)
 
+* student **[Aynur Shauerman](https://github.com/aykuli)**
+* mentor **[Dina Mukhametshina](https://github.com/kamec)**
 
+[Task](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-1/portfolio/portfolio-draft.md)
 
-for [RSScholl](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=2ahUKEwjk9puYsJ7lAhUhpIsKHXAFDJIQFjAAegQIBhAC&url=https%3A%2F%2Frs.school%2F&usg=AOvVaw0nNSAZVeNpCgyirAwkQ-rz)
+Это одностраничный макет, который имеет ссылки на 2 предыдущих проекта: [theYallow](https://aykuli.github.io/portfolio/iframes/theyallow.html) и [repair-design-project](https://aykuli.github.io/portfolio/iframes/repair.html).
 
 

@@ -7,4 +7,6 @@
 
 Это одностраничный макет, который имеет ссылки на 2 предыдущих проекта: [theYallow](https://aykuli.github.io/portfolio/iframes/theyallow.html) и [repair-design-project](https://aykuli.github.io/portfolio/iframes/repair.html).
 
-
+| Deadline  | Project name |
+|-----------|--------------|
+| 18.10.2019 23:59 | portfolio |
